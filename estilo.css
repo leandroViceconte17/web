@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxygen';
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #20252d;
+}
+.contenedor {
+    max-width: 1100px;
+    margin: auto;
+}
+.inicio{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: 40px 0;
+}
+.inicio h3 {
+    padding: 5px 0;
+}
+.inicio h1{
+    color: #2acf7f;
+    font-size: 40px ;
+    padding: 5px 0;
+}
+.inicio p{
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.inicio .contenedor-botones {
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+.btn{
+    background-color: transparent;
+    padding: 15px;
+    border: 1px solid #2acf7f;
+    color: #2acf7f;
+    font-weight: bold;
+    border-radius: 10px; 
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn2{
+    background-color: #2acf7f;
+    color: #161b22;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 0 0 20px #91e0ba;
+}
+.inicio .contenedor-img{
+    background:  linear-gradient(#2acf7f, transparent);
+    max-width: 400px;
+    border-radius: 230px 230px 0 0;
+}
+.inicio .contenedor-img img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 80px 20px 0 40px;
+}
+.inicio .contenedor-redes{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) ;
+}
+.inicio .contenedor-redes a{
+    display: block;
+    color: #2acf7f;
+    font-size: 20px;
+    margin: 15px 0;
+    transition: 3px;
+}
+.inicio .contenedor-redes a:hover i{
+    text-shadow: 0 0 20px #91e0ba;
+}
+/* menu navegacion */ 
+.navigation{
+    width: 400px;
+    height: 70px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.navigation ul{
+    position: relative;
+    display: flex;
+    width: 350px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1 ;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navigation ul li a i{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: .5s;
+    color: #fff;
+}
+.navigation ul li.active a i{
+    transform: translateY(-35px);
+}
+.navigation ul li a .text{
+    position: absolute;
+    color: #3f516f;
+    font-size: .75em;
+    letter-spacing: .05em;
+    transition: .5s;
+    opacity:0 ;
+    transform: translateY(20px);
+}
+.navigationul li.active a .text{
+    opacity:1 ;
+    transform: translateY(10px);
+    color: #fff;
+}
+.indicator{
+    background-color: #2acf7f;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -50%;
+    border-radius: 50%;
+    border: 6px solid rgba(0,0,0,.8);
+    transition: .5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
+}
+.sobre-mi{
+    padding: 50px 0;
+}
+.titulo-seccion{
+    text-align: center;
+    color: #2acf7f;
+    padding: 60px 0;
+}
+.sobre-mi .fila{
+    display: flex;
+    padding: 30px 0;
+}
+.sobre-mi .fila .col{
+    width: 50%;
+}
+.sobre-mi .fila .contenedor-img img{
+    width: 400px;
+    border: 5px solid #2acf7f;
+}
+.sobre-mi .fila .info .contenedor-boxs{
+    display: flex;
+    justify-content: space-between;
+}
+.sobre-mi .fila .info .contenedor-boxs .box{
+    background-color: #91e0ba;
+    width: 140px;
+    height: 140px;
+    text-emphasis: center;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    background-color: #161b22;
+    border-radius: 10px;
+    border: 2px solid #2acf7f;
+    color: #fff;
+    font-weight: bold;
+}
+.sobre-mi .fila .info .contenedor-boxs .box .num{
+    padding: 5px 0;
+    font-size: 14px;
+    color: #91e0ba;
+}
+.sobre-mi .fila .info .presentacion{
+    color: #fff;
+    margin: 30px 0;
+    line-height: 25px;
+}
+/* seccion experiencia */ 
+.experiencia .fila{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.experiencia .fila .col{
+    width: 48%;
+    background-color: #161b22;
+    border: 1px solid #2acf7f;
+    padding: 20px 40px;
+}
+.experiencia .fila .col h3{
+    color: #91e0ba;
+    text-align: center;
+    padding: 20px 0;
+}
+.experiencia .fila .col .info{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+.experiencia .fila .col .info .item {
+    color: #fff;
+    position: relative;
+}
+.experiencia .fila .col .info .item span{
+    display: block;
+    margin-left: 25px;
+}
+.experiencia .fila .col .info .item i{
+    position: absolute;
+    color: #2acf7f;
+    top:4px ;
+}
+.experiencia .fila .col .info .item .skill{
+    font-weight: bold;
+}
+.experiencia .fila .col .info .item .nivel{
+    color: #91e0ba;
+    margin-top: 7px;
+}
+.experiencia .fila .servicio{
+    width: 30%;
+    background-color: #161b22;
+    border: 1px solid #2acf7f;
+    border-radius: 0 0 30px 30px;
+}
+.experiencia .fila .servicio .titulo{
+    background-color: #91e0ba;
+    text-align: center ;
+    padding: 30px 0;
+    border-radius: 0 0 30px 30px;
+}
+.experiencia .fila .servicio  ul{
+    color: #fff;
+    padding: 0 20px;
+}
+.experiencia .fila .servicio  ul li{
+    margin: 15px;
+    line-height: 25px;
+}
+/*porfolio */
+.porfolio .fila{
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    grid-gap: 20px;
+}
+.porfolio .fila .item{
+    background-color: #161b22;
+    padding: 25%;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+.porfolio .fila .item img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+}
+.porfolio  .fila .item p{
+    color: #fff;
+    margin: 20px 0;
+}
+
