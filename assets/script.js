@@ -40,3 +40,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
+
+//boton descargar CV
+document.getElementById('descargaCV').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.href = 'assets/CV/CV-LeandroViceconte-Sistemas.pdf';
+    link.download = 'CV_Leandro_Viceconte.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
