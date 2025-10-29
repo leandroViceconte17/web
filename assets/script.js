@@ -50,3 +50,10 @@ document.getElementById('descargaCV').addEventListener('click', function() {
     link.click();
     document.body.removeChild(link);
 });
+
+document.getElementById('btnContacto').addEventListener('click', function() {
+    const email = 'leandrov.1791@gmail.com';
+    const subject = 'Contacto desde Portfolio';
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    window.location.href = mailtoLink;
+});
