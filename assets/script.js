@@ -57,3 +57,4 @@ document.getElementById('btnContacto').addEventListener('click', function() {
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
     window.location.href = mailtoLink;
 });
+
