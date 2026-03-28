@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Proyectos - ABM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <div class="gestor-container">
+        <h2 class="gestor-titulo">Gestor de Proyectos (ABM)</h2>
+        <p class="gestor-descripcion">
+            Esta aplicación permite <strong>crear, editar y eliminar proyectos</strong> de manera dinámica.           
+        </p>
+    
+        <!-- Formulario -->
+        <div class="form-container">
+            <div class="form-group">
+                <label>Título del Proyecto</label>
+                <input type="text" id="proyectoTitulo" class="form-input" 
+                       placeholder="Ej: Sistema de Gestión de Inventario">
+            </div>
+
+            <div class="form-group">
+                <label>Estado del Proyecto</label>
+                <select id="proyectoEstado" class="form-input">
+                    <option value="en_desarrollo">En Desarrollo</option>
+                    <option value="completado">Completado</option>
+                    <option value="pausado">Pausado</option>
+                    <option value="planificado">Planificado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Descripción</label>
+                <textarea id="proyectoDescripcion" class="form-input" rows="4" 
+                         placeholder="Describe las características principales del proyecto"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Tecnologías</label>
+                <input type="text" id="proyectoTecnologias" class="form-input" 
+                       placeholder="Ej: HTML, CSS, JavaScript">
+            </div>
+
+            <div class="form-group">
+                <label>URL del Proyecto</label>
+                <input type="url" id="proyectoEnlace" class="form-input" 
+                       placeholder="https://...">
+            </div>
+
+            <button id="btnGuardarProyecto" class="btn-guardar">
+                <i class="fas fa-save"></i> Guardar Proyecto
+            </button>
+        </div>
+
+        <div id="listaProyectos" class="proyectos-lista"></div>
+    </div>
+
+    <div id="social-placeholder"></div>
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/script.js"></script>
+    <script src="assets/abm.js"></script>
+</body>
+</html>
